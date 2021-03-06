@@ -3,12 +3,9 @@ package com.company;
 import java.util.Arrays;
 
 public class BinaryHeap {
-    // 在构造器中使用的变量必须单独声明，否则访问不到
     private int[] data;
     private int size;
     public BinaryHeap(int[] arr) {
-        // 构造器名称必须和类名一致
-        // 构造器和实例方法中，加不加this都无所谓
         this.data = arr;
         this.size = arr.length;
     }
@@ -58,7 +55,7 @@ public class BinaryHeap {
     }
     public static void main(String[] args) {
         int[] arr = {15, 2, 8, 12, 5, 2, 3, 4, 7};
-        com.company.BinaryHeap binaryHeap = new com.company.BinaryHeap(arr);
+        BinaryHeap binaryHeap = new BinaryHeap(arr);
         binaryHeap.rebuildHeap();
         binaryHeap.sort();
         int[] res = binaryHeap.getHeap();
